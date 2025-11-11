@@ -1,0 +1,42 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="WywrotaSongExtractor.MainWindow"
+        Title="WywrotaSongExtractor">
+    <Grid RowDefinitions="Auto,*" ColumnDefinitions="*">
+        <Grid Grid.Row="0" RowDefinitions="*" ColumnDefinitions="Auto,*">
+            <Button Grid.Row="0"
+                    Grid.Column="0" 
+                    Margin="5,5,5,0"
+                    Content="Extract" 
+                    Click="BtnExtract_Click"/>
+            <TextBox Grid.Row="0" 
+                     Grid.Column="1" 
+                     Margin="0,5,5,0"
+                     HorizontalAlignment="Stretch"
+                     Name="UrlTextBox" 
+                     AcceptsReturn="False" 
+                     IsReadOnly="False"/>
+        </Grid> 
+        <Grid Grid.Row="1" RowDefinitions="*" ColumnDefinitions="*,*">
+            <TextBox Grid.Column="0" 
+                     Margin="5,5,2,5"
+                     HorizontalAlignment="Stretch"
+                     VerticalAlignment="Stretch"
+                     Name="LyricsTextBox" 
+                     VerticalContentAlignment="Top"
+                     AcceptsReturn="True" 
+                     IsReadOnly="True"/>
+            <TextBox Grid.Column="1" 
+                     Margin="2,5,5,5"
+                     HorizontalAlignment="Stretch"
+                     VerticalAlignment="Stretch"
+                     Name="ChordsTextBox" 
+                     VerticalContentAlignment="Top"
+                     AcceptsReturn="True" 
+                     IsReadOnly="True"/>
+        </Grid>
+    </Grid>
+</Window>
